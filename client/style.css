@@ -11,6 +11,8 @@ header {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+
+    z-index: 1;
 }
 
 week-element month-label {
@@ -22,6 +24,8 @@ week-element month-label {
 
     -webkit-transition: opacity 0.2s;
     opacity: 1;
+
+    z-index: 2;
 }
 
 month-label {
