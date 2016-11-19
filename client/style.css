@@ -1,0 +1,73 @@
+month-calandar {
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Helvetica", sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    --border-attr: 1px solid lightgray
+}
+
+header {
+    background-color: white;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+week-element month-label {
+    position: absolute;
+    top: 0;
+
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 0.7em 0.5em rgba(255, 255, 255, 1);
+
+    -webkit-transition: opacity 0.2s;
+    opacity: 1;
+}
+
+month-label {
+    font-size: 2em;
+    font-weight: 300;
+}
+
+year-label {
+    font-weight: 100;
+}
+
+week-element {
+    position: relative;
+
+    flex-grow: 1;
+    min-height: 4em;
+
+    display: flex;
+    flex-wrap: nowrap;
+
+    border-bottom: var(--border-attr);
+}
+
+week-element.legend {
+    min-height: auto;
+}
+
+week-element.legend day-element {
+    border: none;
+    font-weight: 200;
+}
+
+day-element {
+    display: block;
+    flex-basis: 14.2857%;
+
+    border-right: var(--border-attr);
+    padding: 0.5em;
+
+    text-align: right;
+}
+
+day-element:first-of-type {
+    border-left: var(--border-attr);
+}
+
+day-element.overflow {
+    color: gray;
+}
