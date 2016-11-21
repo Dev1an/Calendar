@@ -26,7 +26,14 @@ month-label {
 
     position: -webkit-sticky;
     position: sticky;
-    top: 0;
+    top: 5em;
+
+    transform: translateY(-5em);
+    margin-top: 2.5em;
+}
+
+month-element week-element:nth-child(2) {
+    margin-top: -2.5em;
 }
 
 .month-label-container month-label {
@@ -34,6 +41,7 @@ month-label {
     box-shadow: 0 0 0.3em 0.2em rgba(255, 255, 255, 1);
 
     -webkit-transition: opacity 0.2s;
+
 }
 
 year-label {
