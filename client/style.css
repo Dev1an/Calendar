@@ -15,22 +15,25 @@ header {
     z-index: 1;
 }
 
-week-element month-label {
-    position: absolute;
-    top: 0;
-
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 0 0.7em 0.5em rgba(255, 255, 255, 1);
-
-    -webkit-transition: opacity 0.2s;
-    opacity: 1;
-
-    z-index: 2;
-}
-
 month-label {
     font-size: 2em;
     font-weight: 300;
+}
+
+.month-label-container {
+    height: 0;
+    z-index: 2;
+
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.month-label-container month-label {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 0.3em 0.2em rgba(255, 255, 255, 1);
+
+    -webkit-transition: opacity 0.2s;
 }
 
 year-label {
